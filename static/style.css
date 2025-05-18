@@ -1,0 +1,88 @@
+body.dark {
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+.column {
+    min-height: 300px;
+}
+
+.task {
+    background: #e6f6ff;
+    border-left: 5px solid #096f92;
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+}
+
+body.dark .task {
+    background: #334155;
+    border-left-color: #60a5fa;
+    color: #f1f5f9;
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
+
+.task .text {
+    flex: 1;
+    user-select: none;
+}
+
+.task .editable-text {
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.task .editable-text:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #fff;
+    color: #000;
+}
+
+.task .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #096f92;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.task .actions button:hover {
+    color: #064f68;
+}
+
+.priority-low {
+    border-left-color: #84cc16;
+}
+
+.priority-medium {
+    border-left-color: #facc15;
+}
+
+.priority-high {
+    border-left-color: #dc2626;
+}
+
+.task .due-date {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #555;
+}
+
+body.dark .task .due-date {
+    color: #a1a1aa;
+}
